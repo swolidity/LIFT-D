@@ -93,6 +93,7 @@ export default function Home() {
             </Box>
             <NumberInput
               mx={2}
+              value={exercises[i].reps}
               onChange={(n) => {
                 setExercises([
                   ...exercises.slice(0, i),
@@ -113,6 +114,7 @@ export default function Home() {
 
             <IconButton
               onClick={(e) => {
+                console.log({ i });
                 setExercises([
                   ...exercises.slice(0, i),
                   ...exercises.slice(i + 1),
